@@ -34,7 +34,7 @@ angular.module('starter.services', [])
 		return defer.promise;
 	}
 	
-	//Queries Places
+	// Queries Places
 	function getPlaces(objId, location){
 		var Place = Parse.Object.extend("Place");
 		var query = new Parse.Query(Place);
@@ -55,7 +55,7 @@ angular.module('starter.services', [])
 		});
 	}
 	
-	//Queries Pics
+	// Queries Pics
 	function getPics(placeId){
 		var Pic = Parse.Object.extend("Pic");
 		var query = new Parse.Query(Pic);
@@ -116,12 +116,15 @@ angular.module('starter.services', [])
 .service('MapService', function($q){
 	
 	// Sets up default map options
-	this.getMap = {center: {latitude: 40, longitude: -40}, zoom: 2};
+	var map = {center: {latitude: 40, longitude: -40}, zoom: 2};
+	this.getMap = function(){
+		return map;
+	}
 	
 	// Recenters map
 	this.recenter = function(pos){
-		this.map.center.latitude = pos.coords.latitude;
-		this.map.center.longitude = pos.coords.longitude;
+		map.center.latitude = pos.coords.latitude;
+		map.center.longitude = pos.coords.longitude;
 	}
 	
 	// Sets up private geocoder

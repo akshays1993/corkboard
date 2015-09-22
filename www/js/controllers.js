@@ -28,7 +28,7 @@ angular.module('starter.controllers', ['starter.services'])
 	}
 })
 
-// Sets up MyMap Controller
+// Sets up My Map Controller
 .controller('MyMapCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate, ParseService, MapService){
 		
 		// Sets up picture box modal and functions
@@ -53,7 +53,7 @@ angular.module('starter.controllers', ['starter.services'])
 		});
 		
 		// Sets up default map
-		$scope.map = MapService.getMap;
+		$scope.map = MapService.getMap();
 		
 		// Sets up empty markers
 		$scope.markers = [];
@@ -85,6 +85,7 @@ angular.module('starter.controllers', ['starter.services'])
 		}
 })
 
+// Sets up New Pic Controller
 .controller('NewPicCtrl', function($scope, $ionicPopup, Camera, ParseService, MapService, Geolocater){
 	
 	// Sets up camera and gets photo
