@@ -1,0 +1,7 @@
+<ion-view cache-view="false" view-title="My Map">
+  <ion-content ng-controller = "MyMapCtrl">
+	<ui-gmap-google-map center="map.center" zoom="map.zoom">
+		<ui-gmap-markers models="markers" coords="'self'" click="onClick();"></ui-gmap-markers>
+	</ui-gmap-google-map>
+  </ion-content>
+</ion-view>

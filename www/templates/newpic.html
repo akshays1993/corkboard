@@ -1,0 +1,8 @@
+<ion-view view-title="New Pic">
+  <ion-content>
+  <img id="preview" class="last-photo" ng-show="lastPhoto !== undefined" ng-src="{{lastPhoto}}">
+  <button ng-click="savePhoto()" ng-show="lastPhoto !== undefined" class="button button-block button-calm button-save">Save Photo</button>
+  <button ng-click="getPhoto()" class="button button-block button-calm button-take">Take Photo</button>
+  <canvas ng-hide="true" id="myCanvas" class="canvas-copy"></canvas>
+  </ion-content>
+</ion-view>

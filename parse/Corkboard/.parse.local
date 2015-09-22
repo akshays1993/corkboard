@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Corkboard": {
+      "applicationId": "jAi8idzvPXkNMiGQMOhFr19tg23JT8CtGYbfiaPp"
+    },
+    "_default": {
+      "link": "Corkboard"
+    }
+  }
+}

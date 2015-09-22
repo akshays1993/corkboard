@@ -1,0 +1,10 @@
+<ion-content>
+	<div class="modal-view">
+		<ion-slide-box class="slide-box" on-slide-changed="slideHasChanged($index)">
+			<ion-slide ng-repeat="picUrl in picUrls">
+				<img ng-src="{{picUrl}}" class="img-slide">
+			</ion-slide>
+		</ion-slide-box>
+		<button class="button button-full button-calm button-close" ng-click="closeModal();">Close</button>
+	</div>
+</ion-content>
